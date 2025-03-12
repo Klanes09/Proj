@@ -35,10 +35,17 @@ public class Exception{
     }
 
     public static void Menu1(Scanner scan){
-        System.out.print("Input 1stnum >>> ");
-        res1 = scan.nextInt();
-        System.out.print("Input 2ndnum >>> ");
-        res2 = scan.nextInt();
+        try{
+            System.out.print("Input 1stnum >>> ");
+            res1 = scan.nextInt();
+            System.out.print("Input 2ndnum >>> ");
+            res2 = scan.nextInt();
+        }
+        catch(java.util.InputMismatchException rahh){
+            System.out.println("Error: Input Mismatch! Please enter a number");
+            scan.close();
+            System.exit(res1);
+        }
     }
 
     public static void Menu2(){
